@@ -17,7 +17,8 @@ export default function Section({ id, title, children }: Props) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="min-h-screen px-10 py-40 bg-black"
+      className="min-h-screen px-10 py-40"
+      style={{ background: "var(--color-bg)" }}
     >
       <h2 className="text-5xl font-bold mb-10">{title}</h2>
       {children}

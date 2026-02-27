@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { link } from "fs/promises";
+
 
 export default function Navbar() {
   const links = [
@@ -8,7 +11,7 @@ export default function Navbar() {
     "about",
     "projects",
     "play",
-    "talents",
+   
     "contact",
   ];
 
@@ -24,21 +27,40 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-10 py-6 flex justify-between text-xs uppercase tracking-widest">
-      <ul className="flex gap-6 opacity-80">
-        {links.map((link) => (
-          <li key={link}>
-            <a href={`#${link}`} className="hover:opacity-60 transition">
-              {link}
-            </a>
+      <p
+        className="font-bold"
+        style={{ color: "var(--color-text)" }}
+      >
+        Please call me  Alevev
+      </p>
+      <ul className="flex gap-4 opacity-60 items-start justify-between">
+        
+           {links.map((item) => (
+          <li key={item}>
+
+    
+
+           
+                <a
+                  href={`#${item}`}
+                  onClick={(e) => {
+                    if (item === "contact") {
+                      e.preventDefault();
+                      window.dispatchEvent(new Event("open-contact"));
+                    }
+              
+                  
+              }}
+              className="hover:opacity-60 transition"
+            >
+    {item}            </a>
+           
           </li>
         ))}
       </ul>
 
       <div className="flex items-center gap-3 opacity-70">
-        {/* Location */}
         <span>Los Angeles, CA</span>
-
-        {/* The toggle DOT */}
         <button
           onClick={toggleTheme}
           aria-label="Toggle theme"
@@ -48,3 +70,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
