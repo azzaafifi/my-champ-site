@@ -1,11 +1,6 @@
-import ContactModal from "@/components/ContactModal";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { i } from "framer-motion/client";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import React from "react";
-import Link from "next/link";
-import About from "@/components/AboutSection";
-
 
 export const metadata = {
   title: "Champ Studio",
@@ -20,16 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <ContactModal />
-        
-
-      
-        
-
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );
 }
-

@@ -18,7 +18,7 @@ export default function About() {
         <h1 className={styles.title}>
           Please <br /> Call Me aleven 
           
-          <span className={styles.dash}> — Motion Designer.</span>
+          <span className={styles.dash}> — Motion Designer —</span>
         </h1>
 
         <div className={styles.imageWrapper}>

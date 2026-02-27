@@ -1,6 +1,6 @@
 .container {
-  background: #000;
-  color: #fff;
+  background: var(--color-bg);
+  color: var(--color-text);
   padding: 120px 10%;
 }
 
@@ -14,17 +14,13 @@
 }
 
 .title {
-  font-size: clamp(4rem, 12vw, 10rem); /* كبير جدًا ويتغير حسب الشاشة */
+  font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: white;
-  mix-blend-mode: difference; /* تأثير جميل لو تحب يظهر على الصورة */
- 
-
-    align-items: baseline; 
-    margin-top: 250px;
-    
+  color: var(--color-text);
+  align-items: baseline;
+  margin-top: 250px;
 }
 .dash {
   display: block;
@@ -82,7 +78,7 @@
   display: block;
   width: 60px;
   height: 2px;
-  background: #fff;
+  background: var(--color-text);
   margin-top: 20px;
 }
 
